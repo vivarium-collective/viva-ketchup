@@ -32,7 +32,7 @@ _REPO_ROOT = _PKG_DIR.parent
 
 def _cache_root() -> Path:
     return Path(os.environ.get("KETCHUP_CACHE",
-                               Path.home() / ".cache" / "pbg-ketchup"))
+                               Path.home() / ".cache" / "viva-ketchup"))
 
 
 # ---------------------------------------------------------------- upstream src

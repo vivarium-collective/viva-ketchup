@@ -1,4 +1,4 @@
-# pbg-ketchup
+# viva-ketchup
 
 A [process-bigraph](https://github.com/vivarium-collective/process-bigraph)
 wrapper for **[KETCHUP](https://github.com/maranasgroup/KETCHUP)** (Maranas
@@ -38,7 +38,7 @@ supported ways to provide it:
 ```bash
 # Option A — conda (matches upstream KETCHUP, recommended):
 mamba env create -f environment.yml
-mamba activate pbg-ketchup
+mamba activate viva-ketchup
 pip install -e .            # add this wrapper into the env
 
 # Option B — uv venv + a precompiled IPOPT from IDAES:
@@ -49,7 +49,7 @@ idaes get-extensions       # downloads an ipopt binary onto PATH
 
 KETCHUP (`ktools`) ships no PyPI release and **no license**, so this package
 does not redistribute its source or datasets. On first use,
-`pbg_ketchup.runtime` clones KETCHUP into a cache dir (`~/.cache/pbg-ketchup`,
+`viva_ketchup.runtime` clones KETCHUP into a cache dir (`~/.cache/viva-ketchup`,
 override with `KETCHUP_CACHE`) and copies out only the model files it needs;
 everything after is cached. Developers may instead drop the upstream `ktools`
 source under `third_party/` and the K-FIT xlsx under `datasets/<model>/`
@@ -63,7 +63,7 @@ source under `third_party/` and the K-FIT xlsx under `datasets/<model>/`
 ```python
 import os
 from process_bigraph import allocate_core
-from pbg_ketchup import KetchupEstimator
+from viva_ketchup import KetchupEstimator
 
 step = KetchupEstimator(config={"model_name": "k-ecoli74"}, core=allocate_core())
 result = step.update({"seed": 0})
@@ -115,7 +115,7 @@ and `initial_conditions` (`map[string,map[string,float]]`), plus `sse`,
 `FDH`, `BDH`.
 
 ```python
-from pbg_ketchup import KetchupDynamicEstimator
+from viva_ketchup import KetchupDynamicEstimator
 step = KetchupDynamicEstimator(config={"model_name": "FDH"}, core=allocate_core())
 r = step.update({"seed": 0})          # ~1.5 s to optimal, SSE ~0.01
 r["nadh_fit"]["A1"]                    # fitted NADH(t) for the first condition
@@ -135,7 +135,7 @@ r["nadh_fit"]["A1"]                    # fitted NADH(t) for the first condition
 
 ## Architecture mapping
 
-| KETCHUP / `ktools` | pbg-ketchup |
+| KETCHUP / `ktools` | viva-ketchup |
 |---|---|
 | `ketchup_generate_model(options)` | built inside `update()` |
 | `solve_ketchup_model(model, options)` (IPOPT) | called inside `update()` |

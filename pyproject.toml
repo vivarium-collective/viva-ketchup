@@ -3,7 +3,7 @@ requires = ["hatchling>=1.18"]
 build-backend = "hatchling.build"
 
 [project]
-name = "pbg-ketchup"
+name = "viva-ketchup"
 version = "0.1.0"
 description = "Process-bigraph wrapper for KETCHUP kinetic parameter estimation"
 readme = "README.md"
@@ -32,9 +32,9 @@ dependencies = [
 dev = ["pytest", "plotly", "bigraph-viz2"]
 
 [project.urls]
-Homepage = "https://github.com/vivarium-collective/pbg-ketchup"
-Issues = "https://github.com/vivarium-collective/pbg-ketchup/issues"
+Homepage = "https://github.com/vivarium-collective/viva-ketchup"
+Issues = "https://github.com/vivarium-collective/viva-ketchup/issues"
 Upstream = "https://github.com/maranasgroup/KETCHUP"
 
 [tool.hatch.build.targets.wheel]
-packages = ["pbg_ketchup"]
+packages = ["viva_ketchup", "pbg_ketchup"]  # viva_ketchup real; pbg_ketchup = back-compat import shim

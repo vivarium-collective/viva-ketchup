@@ -1,4 +1,4 @@
-name: pbg-ketchup
+name: viva-ketchup
 channels:
   - conda-forge
 dependencies:

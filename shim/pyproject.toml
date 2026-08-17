@@ -1,0 +1,16 @@
+[project]
+name = "pbg-ketchup"
+# The pre-rename dist name. This shim just depends on viva-ketchup so existing
+# `pbg-ketchup` deps keep resolving. Import `viva_ketchup` (a `pbg_ketchup` import
+# shim also ships in viva-ketchup). Keep the version in lockstep with viva-ketchup.
+version = "0.1.0"
+description = "Deprecated alias — renamed to 'viva-ketchup'. Depends on it so existing 'pbg-ketchup' deps keep resolving."
+requires-python = ">=3.10"
+dependencies = ["viva-ketchup>=0.1.0"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["pbg_ketchup_shim"]

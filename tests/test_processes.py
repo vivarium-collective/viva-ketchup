@@ -10,7 +10,7 @@ import os
 import pytest
 from process_bigraph import allocate_core
 
-from pbg_ketchup import KetchupEstimator
+from viva_ketchup import KetchupEstimator
 
 EXPECTED_OUTPUTS = {
     "kf", "kr", "concentrations", "enzymes", "fluxes",

@@ -9,7 +9,7 @@ import os
 import pytest
 from process_bigraph import allocate_core
 
-from pbg_ketchup import KetchupDynamicEstimator
+from viva_ketchup import KetchupDynamicEstimator
 
 EXPECTED = {
     "kinetic_parameters", "nadh_time", "nadh_fit", "data_time", "data_nadh",
@@ -33,7 +33,7 @@ def test_ports():
 
 
 def test_bundled_dynamic_paths_exist():
-    from pbg_ketchup.runtime import BUNDLED_DYNAMIC_MODELS, dataset_dir
+    from viva_ketchup.runtime import BUNDLED_DYNAMIC_MODELS, dataset_dir
     for name, bundle in BUNDLED_DYNAMIC_MODELS.items():
         d = dataset_dir(name)
         for key in ("filename_model", "filename_mechanism", "filename_data"):

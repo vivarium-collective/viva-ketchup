@@ -9,7 +9,7 @@ time-stepped integration), the natural process-bigraph wrapping is a
 optimizer, and writes the estimated parameters / fit quality to its outputs.
 
 This is a **real bridge** — ``update()`` drives the genuine ``ktools`` solver
-(see :mod:`pbg_ketchup.runtime`), it does not reproduce KETCHUP's math.
+(see :mod:`viva_ketchup.runtime`), it does not reproduce KETCHUP's math.
 """
 
 from __future__ import annotations
