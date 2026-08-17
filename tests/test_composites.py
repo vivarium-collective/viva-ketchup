@@ -1,6 +1,6 @@
 """Tests that the KETCHUP composite generators are registered and well-formed."""
 
-from pbg_ketchup.composites import ketchup_baseline, ketchup_multistart
+from viva_ketchup.composites import ketchup_baseline, ketchup_multistart
 
 
 def test_generators_registered():

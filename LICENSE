@@ -22,7 +22,7 @@ SOFTWARE.
 
 ---
 
-NOTE: This MIT license covers ONLY the pbg-ketchup wrapper code in this
+NOTE: This MIT license covers ONLY the viva-ketchup wrapper code in this
 repository. It does NOT cover KETCHUP itself (the `ktools` package) or its
 datasets, which are the work of the Maranas group
 (https://github.com/maranasgroup/KETCHUP) and are not redistributed here —

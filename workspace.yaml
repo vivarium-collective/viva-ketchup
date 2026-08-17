@@ -4,7 +4,7 @@ description: >-
   Process-bigraph wrapper for KETCHUP kinetic parameter estimation. Bridges the
   real ktools/IPOPT solver as a Step; bundles the k-ecoli74 and k-ecoli307
   K-FIT models.
-package_path: pbg_ketchup
+package_path: viva_ketchup
 upstream:
   tool: KETCHUP
   url: https://github.com/maranasgroup/KETCHUP

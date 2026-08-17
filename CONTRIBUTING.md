@@ -1,4 +1,4 @@
-# Contributing to pbg-ketchup
+# Contributing to viva-ketchup
 
 ## Development setup
 
@@ -7,7 +7,7 @@ conda spec:
 
 ```bash
 mamba env create -f environment.yml
-mamba activate pbg-ketchup
+mamba activate viva-ketchup
 pip install -e .
 pytest
 ```

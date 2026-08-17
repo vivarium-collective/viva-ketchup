@@ -42,7 +42,7 @@ important for long-time-course accuracy.
 
 ## How this maps to the wrapper
 
-`KetchupDynamicEstimator` (in `pbg_ketchup/processes.py`) drives the real
+`KetchupDynamicEstimator` (in `viva_ketchup/processes.py`) drives the real
 `ktools` dynamic path with `data_type=dynamic`, `mechanism_type=custom`,
 `data_format=strainer`, and the per-model strainer header in
 `runtime.BUNDLED_DYNAMIC_MODELS`. Outputs carry the fitted custom-mechanism

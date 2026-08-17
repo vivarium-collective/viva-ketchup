@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate a self-contained HTML demo report for pbg-ketchup.
+"""Generate a self-contained HTML demo report for viva-ketchup.
 
 Runs the *real* KETCHUP/IPOPT solver through the ``KetchupEstimator`` Step on
 two K-FIT E. coli models (k-ecoli74, k-ecoli307), parses IPOPT's own iteration
@@ -28,8 +28,8 @@ REPO = HERE.parent
 sys.path.insert(0, str(REPO))
 
 from process_bigraph import allocate_core  # noqa: E402
-from pbg_ketchup import KetchupEstimator, KetchupDynamicEstimator  # noqa: E402
-from pbg_ketchup.composites import ketchup_baseline  # noqa: E402
+from viva_ketchup import KetchupEstimator, KetchupDynamicEstimator  # noqa: E402
+from viva_ketchup.composites import ketchup_baseline  # noqa: E402
 
 OUT = HERE / "report.html"
 WORKDIR = HERE / "_run"
@@ -454,7 +454,7 @@ def build_html(runs, dyn_runs=None) -> str:
     return f"""<!doctype html>
 <html lang="en"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>pbg-ketchup — KETCHUP demo report</title>
+<title>viva-ketchup — KETCHUP demo report</title>
 <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
 <style>
 :root {{ --bg:#f8fafc; --fg:#0f172a; --mut:#64748b; --line:#e2e8f0; }}
@@ -513,7 +513,7 @@ pre.tree {{ font-family:'SF Mono',Menlo,Consolas,monospace; font-size:12.5px;
 footer {{ text-align:center; color:var(--mut); font-size:12px; padding:30px; }}
 </style></head><body>
 <header class="top">
-  <h1>🧪 pbg-ketchup</h1>
+  <h1>🧪 viva-ketchup</h1>
   <span class="tag">real KETCHUP / IPOPT bridge · process-bigraph Step</span>
   <nav>{nav}</nav>
 </header>
@@ -559,7 +559,7 @@ footer {{ text-align:center; color:var(--mut); font-size:12px; padding:30px; }}
   {''.join(dyn_sections)}
 
   <footer>Generated {generated} · {len(runs)} steady-state + {len(dyn_runs)} dynamic
-    real IPOPT runs · total solver wall-time {runtime_total:.1f}s · pbg-ketchup v0.1.0</footer>
+    real IPOPT runs · total solver wall-time {runtime_total:.1f}s · viva-ketchup v0.1.0</footer>
 </main>
 <script>
 document.querySelectorAll('.tog').forEach(function(t){{
