@@ -7,6 +7,7 @@ process-bigraph :class:`~process_bigraph.Step`.
 """
 
 from .processes import KetchupEstimator, KetchupDynamicEstimator
+from .core import build_core
 
 # Importing the composites subpackage fires the @composite_generator decorators.
 from . import composites  # noqa: F401
@@ -15,6 +16,7 @@ from .composites import ketchup_baseline, ketchup_multistart, ketchup_dynamic
 __all__ = [
     "KetchupEstimator",
     "KetchupDynamicEstimator",
+    "build_core",
     "ketchup_baseline",
     "ketchup_multistart",
     "ketchup_dynamic",
